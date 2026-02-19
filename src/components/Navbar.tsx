@@ -345,8 +345,12 @@ function Navbar() {
         
         {!isLearnPage && (
           <div
-            className={`h-10 flex justify-center items-center cursor-pointer rounded-md ${
-              hovered === "join" ? "shadow-[0_0_10px_10px_rgba(255,255,255,0.1)]" : ""
+            className={`h-16 flex items-center justify-center cursor-pointer rounded-md ${
+              screens.md
+                ? "px-5 border-l border-white border-opacity-10 pl-4 pr-4"
+                : "px-2.5 pl-1.5 pr-1.5"
+            } ${
+              hovered === "join" ? "bg-white bg-opacity-10" : "bg-transparent"
             }`}
             onMouseEnter={() => setHovered("join")}
             onMouseLeave={() => setHovered(null)}
